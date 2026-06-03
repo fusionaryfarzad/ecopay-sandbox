@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoPayImpact // Consumer Application Sandbox</title>
+  <title>EcoPayImpact // Consumer Profile Assessment</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,77 +13,82 @@
     .mono { font-family: 'Roboto Mono', monospace; }
   </style>
 </head>
-<body class="min-h-screen text-white antialiased p-4 flex flex-col items-center justify-center gap-6">
+<body class="min-h-screen text-white antialiased p-4 md:p-8 flex flex-col items-center justify-center">
 
-  <div class="w-full max-w-[390px] h-[780px] bg-[#F9F9F9] rounded-[48px] border-[10px] border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col relative text-gray-900">
+  <div class="w-full max-w-xl bg-[#F9F9F9] rounded-[32px] border-4 border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col text-gray-900 min-h-[600px] transition-all duration-300">
     
-    <header class="bg-[#0B3D2E] text-white px-6 pt-12 pb-4 flex items-center justify-between shadow-md shrink-0">
+    <header class="bg-[#0B3D2E] text-white px-6 md:px-8 pt-8 pb-5 flex items-center justify-between shadow-sm shrink-0">
       <div>
-        <span class="mono text-[9px] tracking-[0.3em] text-[#00F5FF] font-bold">ECOPAYIMPACT</span>
-        <h1 class="text-base font-black tracking-tight">Identity Mint</h1>
+        <span class="mono text-[10px] tracking-[0.35em] text-[#00F5FF] font-bold uppercase">EcoPayImpact</span>
+        <h1 class="text-xl font-black tracking-tight mt-0.5">Ecosystem Identity Mint</h1>
       </div>
-      <div class="border border-[#00F5FF]/30 bg-[#00F5FF]/10 rounded-full px-2.5 py-0.5 text-[9px] mono text-[#00F5FF] font-bold">LIVE ALPHA</div>
+      <div class="border border-[#00F5FF]/30 bg-[#00F5FF]/10 rounded-full px-3 py-1 text-[10px] mono text-[#00F5FF] font-bold tracking-wider">
+        SECURE NODE
+      </div>
     </header>
 
-    <div id="progress-bar-container" class="w-full h-1 bg-[#0B3D2E]/20 shrink-0">
+    <div id="progress-bar-container" class="w-full h-1.5 bg-[#0B3D2E]/10 shrink-0">
       <div id="progress-bar" class="h-full bg-[#00F5FF] transition-all duration-300" style="width: 11.11%"></div>
     </div>
 
-    <main class="flex-1 overflow-y-auto p-5 flex flex-col justify-between bg-[#F9F9F9]">
+    <main class="flex-1 p-6 md:p-8 flex flex-col justify-between bg-[#F9F9F9]">
       
-      <div id="quiz-view" class="flex flex-col justify-between h-full">
+      <div id="quiz-view" class="flex flex-col justify-between h-full space-y-6">
         <div>
-          <div class="flex items-center justify-between mb-3">
-            <span id="question-number" class="mono text-[11px] font-bold text-[#0B3D2E]/70 uppercase">Question 1 of 9</span>
-            <span class="mono text-[9px] text-emerald-600 font-bold tracking-wide">● MATRIX ACTIVE</span>
+          <div class="flex items-center justify-between mb-4">
+            <span id="question-number" class="mono text-xs font-bold text-[#0B3D2E]/70 uppercase tracking-wider">Question 1 of 9</span>
+            <span class="mono text-[10px] text-emerald-600 font-bold tracking-wide">● BEHAVIORAL LOGIC ACTIVE</span>
           </div>
-          <h3 id="question-text" class="text-lg font-black text-[#0B3D2E] leading-snug tracking-tight mb-5">
+          
+          <h2 id="question-text" class="text-xl md:text-2xl font-black text-[#0B3D2E] leading-snug tracking-tight mb-6">
             Which operational brand signal do you prioritize when evaluating a product?
-          </h3>
-          <div id="choices-container" class="space-y-2.5">
+          </h2>
+
+          <div id="choices-container" class="space-y-3">
             </div>
         </div>
-        <footer class="text-center pt-4 shrink-0">
-          <p class="mono text-[9px] text-gray-400 tracking-tight">// Cryptographic Identity Generation</p>
+
+        <footer class="text-center pt-4 border-t border-gray-100 shrink-0">
+          <p class="mono text-[10px] text-gray-400 tracking-tight">// Cryptographic Psychometric Persona Alignment Matrix</p>
         </footer>
       </div>
 
-      <div id="results-view" class="hidden flex flex-col justify-between h-full text-center">
-        <div class="space-y-4">
-          <div class="inline-block bg-[#0B3D2E]/10 border border-[#0B3D2E]/20 rounded-full px-3 py-0.5 mt-2">
-            <span class="mono text-[10px] font-bold text-[#0B3D2E]">Ecosystem Profile Mapped</span>
+      <div id="results-view" class="hidden flex flex-col justify-between h-full space-y-6 animate-fade-in">
+        <div class="space-y-5">
+          <div class="inline-block bg-[#0B3D2E]/10 border border-[#0B3D2E]/20 rounded-full px-4 py-1">
+            <span class="mono text-xs font-bold text-[#0B3D2E] tracking-wide">Ecosystem Assignment Complete</span>
           </div>
           
-          <div class="bg-white border-2 border-[#0B3D2E] rounded-2xl p-5 shadow-lg relative overflow-hidden">
+          <div class="bg-white border-2 border-[#0B3D2E] rounded-2xl p-6 shadow-md relative overflow-hidden text-center">
             <div class="absolute top-0 left-0 w-full h-1.5 bg-[#00F5FF]"></div>
-            <div id="archetype-icon" class="text-4xl mb-2">🦉</div>
-            <h4 id="archetype-title" class="text-xl font-black text-[#0B3D2E] uppercase tracking-tight">The Precision Owl</h4>
-            <p class="mono text-[9px] text-[#00F5FF] font-bold bg-[#051410] inline-block px-2.5 py-0.5 rounded mt-1.5 tracking-wider">VERIFIED MATCH</p>
+            <div id="archetype-icon" class="text-5xl mb-2">🦉</div>
+            <h3 id="archetype-title" class="text-2xl font-black text-[#0B3D2E] uppercase tracking-tight">The Precision Owl</h3>
+            <p class="mono text-[10px] text-[#00F5FF] font-bold bg-[#051410] inline-block px-3 py-1 rounded-md mt-2 tracking-widest">VERIFIED IDENTITY PROFILE</p>
           </div>
 
-          <div class="text-left bg-white border border-gray-200 rounded-xl p-4 space-y-2 shadow-sm">
-            <h5 class="mono text-[10px] font-bold text-[#0B3D2E] tracking-wider uppercase">// Core Strength Vector:</h5>
-            <p id="archetype-description" class="text-xs text-gray-600 leading-relaxed">
-              Your ecosystem validation vector relies on absolute clarity. Like an eagle-eyed owl, you look past surface greenwashing to examine raw ingredient trace maps before aligning assets.
+          <div class="text-left bg-white border border-gray-200 rounded-xl p-5 space-y-2.5 shadow-sm">
+            <h4 class="mono text-[11px] font-bold text-[#0B3D2E] tracking-wider uppercase">// Psychological Profile Assets:</h4>
+            <p id="archetype-description" class="text-xs md:text-sm text-gray-600 leading-relaxed">
+              Your ecosystem validation vector relies on absolute clarity. Like an eagle-eyed owl, you look past surface greenwashing to examine raw ingredient trace maps, tier-2 supplier registers, and precise agricultural telemetry before aligning your assets.
             </p>
           </div>
 
-          <div class="text-left bg-[#051410] text-gray-200 rounded-xl p-4 border border-white/10 space-y-2 shadow-inner">
-            <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
-              <span class="mono text-[9px] text-[#00F5FF] tracking-wider uppercase">✉️ AUTOMATED PROFILE MINT</span>
-              <span class="mono text-[8px] text-gray-400">STATUS: READY</span>
+          <div class="text-left bg-[#051410] text-gray-200 rounded-xl p-5 border border-white/10 space-y-2.5 shadow-inner">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+              <span class="mono text-[10px] text-[#00F5FF] tracking-wider uppercase">✉️ Automated Onboarding Network Loop</span>
+              <span class="mono text-[9px] text-gray-400">STATUS: DELIVERED</span>
             </div>
-            <p class="mono text-[10px] text-gray-300 font-bold">To: <span class="text-white font-sans">consumer@network.io</span></p>
-            <p class="text-[11px] text-gray-400 leading-normal italic">
-              "Your unique animal profile data signature is now secure. Returning to the launch portal will unlock your primary ecosystem dashboard access points."
+            <p class="mono text-xs text-gray-300">To: <span class="text-white font-sans font-semibold">consumer@ecosystem.network</span></p>
+            <p class="text-xs md:text-sm text-gray-400 leading-relaxed italic">
+              "Your unique animal identity tracking signature has been securely logged. Returning to the main launch platform will automatically customize your upcoming neighborhood brand interaction reward feeds."
             </p>
           </div>
         </div>
 
-        <div class="pt-4 space-y-2 shrink-0">
-          <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="w-full bg-[#0B3D2E] text-white text-xs font-bold py-4 px-6 rounded-xl shadow-md hover:bg-[#051410] transition flex items-center justify-center gap-2">
-            <span>Lock Profile & View Next Steps</span>
-            <span class="text-[#00F5FF]">→</span>
+        <div class="pt-4 border-t border-gray-100 shrink-0">
+          <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="w-full bg-[#0B3D2E] text-white font-bold py-4 px-6 rounded-xl text-sm tracking-wide shadow-lg hover:bg-[#051410] transition-all duration-200 flex items-center justify-center gap-3">
+            <span>Lock Identity Profile & View Next Steps</span>
+            <span class="text-[#00F5FF] font-sans font-black">→</span>
           </button>
         </div>
       </div>
@@ -208,7 +213,7 @@
       currentQuestion.choices.forEach(choice => {
         const button = document.createElement('button');
         button.innerText = choice.text;
-        button.className = "w-full text-left bg-white text-gray-800 border border-gray-200 rounded-2xl p-4 text-xs font-semibold shadow-sm hover:border-[#0B3D2E] hover:bg-[#0B3D2E]/5 transition-all duration-200 leading-normal";
+        button.className = "w-full text-left bg-white text-gray-800 border border-gray-200 rounded-2xl p-4 text-xs md:text-sm font-semibold shadow-sm hover:border-[#0B3D2E] hover:bg-[#0B3D2E]/5 transition-all duration-200 leading-normal";
         button.onclick = () => handleAnswer(choice.type);
         choicesContainer.appendChild(button);
       });
