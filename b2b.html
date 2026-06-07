@@ -19,14 +19,21 @@
     <div class="absolute top-0 right-0 p-8 opacity-5 font-mono text-9xl select-none pointer-events-none text-[#00F5FF]">B2B</div>
     
     <div>
-      <header class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-white/10 pb-5 gap-4">
+      <!-- INTEGRATED ENTERPRISE HEADER WITH ACTION ANCHOR -->
+      <header class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between border-b border-white/10 pb-5 gap-4">
         <div>
           <p class="mono text-xs tracking-[0.3em] text-[#00F5FF] font-bold uppercase">Enterprise Control Tower</p>
           <h3 class="text-3xl font-black text-white tracking-tight mt-1 uppercase">Local Market Telemetry Vault</h3>
         </div>
-        <div class="sm:text-right">
-          <p class="mono text-[10px] text-gray-400 uppercase tracking-wider">Aggregation Nodes</p>
-          <p class="mono text-sm text-emerald-400 font-bold mt-0.5">● LIVE PRODUCTION MATRIX</p>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:text-right shrink-0">
+          <!-- PRIMARY ACTION: OPEN GOOGLE FORMS BETA COHORT REGISTRY -->
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSddEMKr4J4UBP-zf9IQCkC5Q-rIZcGTjcBIFGAJ86x5xYM0fg/viewform?usp=publish-editor" target="_blank" class="inline-block mono text-xs bg-[#00F5FF] text-gray-900 font-black px-4 py-2.5 rounded-xl hover:bg-white transition-all shadow-md whitespace-nowrap">
+            Join the beta: EcoPayImpact ↗
+          </a>
+          <div>
+            <p class="mono text-[10px] text-gray-400 uppercase tracking-wider">Aggregation Nodes</p>
+            <p class="mono text-sm text-emerald-400 font-bold mt-0.5">● LIVE PRODUCTION MATRIX</p>
+          </div>
         </div>
       </header>
 
@@ -83,6 +90,7 @@
       </div>
     </div>
 
+    <!-- PERSISTENT NAVIGATION RETURN ANCHOR -->
     <footer class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0">
       <p class="mono text-[10px] text-gray-500">// Secure Enterprise Console Framework. Authorized Access Node Only.</p>
       <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="mono text-xs bg-[#0B3D2E] border border-[#00F5FF]/30 text-[#00F5FF] font-bold px-5 py-2.5 rounded-xl hover:bg-transparent transition-all shadow-md">
