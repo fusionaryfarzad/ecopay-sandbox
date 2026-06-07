@@ -15,8 +15,10 @@
 </head>
 <body class="min-h-screen text-white antialiased p-4 md:p-8 flex flex-col items-center justify-center">
 
-  <div class="w-full max-w-xl bg-[#F9F9F9] rounded-[32px] border-4 border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col text-gray-900 min-h-[600px] transition-all duration-300">
+  <!-- MASTER DISPLAY CARD CONTAINER -->
+  <div class="w-full max-w-xl bg-[#F9F9F9] rounded-[32px] border-4 border-#0B3D2E shadow-2xl overflow-hidden flex flex-col text-gray-900 min-h-[600px] transition-all duration-300">
     
+    <!-- Header Component -->
     <header class="bg-[#0B3D2E] text-white px-6 md:px-8 pt-8 pb-5 flex items-center justify-between shadow-sm shrink-0">
       <div>
         <span class="mono text-[10px] tracking-[0.35em] text-[#00F5FF] font-bold uppercase">EcoPayImpact</span>
@@ -25,13 +27,15 @@
       <div class="border border-[#00F5FF]/30 bg-[#00F5FF]/10 rounded-full px-3 py-1 text-[10px] mono text-[#00F5FF] font-bold tracking-wider">SECURE NODE</div>
     </header>
 
+    <!-- Progress Indicator Tracker -->
     <div id="progress-bar-container" class="w-full h-1.5 bg-[#0B3D2E]/10 shrink-0">
       <div id="progress-bar" class="h-full bg-[#00F5FF] transition-all duration-300" style="width: 11.11%"></div>
     </div>
 
+    <!-- Active Portal Stage -->
     <main class="flex-1 p-6 md:p-8 flex flex-col justify-between bg-[#F9F9F9]">
       
-      <!-- QUIZ MODE -->
+      <!-- VIEWPORT 01: THE QUESTIONS ACTIVE PANEL -->
       <div id="quiz-view" class="flex flex-col justify-between h-full space-y-6">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -48,13 +52,14 @@
         </footer>
       </div>
 
-      <!-- RESULTS MODE -->
-      <div id="results-view" class="hidden flex flex-col justify-between h-full space-y-5 animate-fade-in">
+      <!-- VIEWPORT 02: THE RESULTS ACCELERATOR PANEL -->
+      <div id="results-view" class="hidden flex flex-col justify-between h-full space-y-5">
         <div class="space-y-4">
           <div class="inline-block bg-[#0B3D2E]/10 border border-[#0B3D2E]/20 rounded-full px-4 py-1">
             <span class="mono text-xs font-bold text-[#0B3D2E] tracking-wide">Ecosystem Assignment Complete</span>
           </div>
           
+          <!-- Animal Badge Profile Result Card -->
           <div class="bg-white border-2 border-[#0B3D2E] rounded-2xl p-4 shadow-md relative overflow-hidden text-center">
             <div class="absolute top-0 left-0 w-full h-1.5 bg-[#00F5FF]"></div>
             <div id="archetype-icon" class="text-5xl mb-1">🦉</div>
@@ -62,12 +67,13 @@
             <p class="mono text-[10px] text-[#00F5FF] font-bold bg-[#051410] inline-block px-3 py-1 rounded-md mt-2 tracking-widest">VERIFIED IDENTITY PROFILE</p>
           </div>
 
+          <!-- Description Text Box Frame -->
           <div class="text-left bg-white border border-gray-200 rounded-xl p-4 space-y-1 shadow-sm">
             <h4 class="mono text-[10px] font-bold text-[#0B3D2E] tracking-wider uppercase">// Your Eco-Shopping Style:</h4>
-            <p id="archetype-description" class="text-xs text-gray-600 leading-relaxed">Loading alignment footprint...</p>
+            <p id="archetype-description" class="text-xs text-gray-600 leading-relaxed">Processing matrix alignment data...</p>
           </div>
 
-          <!-- THE HIGH-ENGAGEMENT EMAIL HOOK -->
+          <!-- THE HIGH-ENGAGEMENT EMAIL REGISTRATION HOOK CONTAINER -->
           <div id="hook-container" class="text-left bg-[#051410] text-gray-200 rounded-xl p-4 border border-white/10 space-y-3 shadow-inner">
             <div class="border-b border-white/10 pb-2">
               <span class="mono text-[10px] text-[#00F5FF] tracking-wider uppercase">🎁 Unlocked: Comprehensive Persona Breakdown</span>
@@ -75,7 +81,7 @@
             </div>
             
             <div id="hook-form" class="space-y-2">
-              <input type="email" id="hook-email" placeholder="Enter your email address..." class="w-full bg-white text-gray-900 placeholder-gray-400 rounded-lg p-3 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-[#00F5FF]">
+              <input type="email" id="hook-email" placeholder="Enter your email address..." class="w-full bg-white text-gray-900 placeholder-gray-400 rounded-lg p-3 text-xs font-semibold focus:outline-none">
               <button onclick="submitHookEmail()" class="w-full bg-[#0B3D2E] text-white font-bold py-2.5 rounded-lg text-xs tracking-wide hover:bg-emerald-900 transition-all">
                 Send My Detailed Assessment →
               </button>
@@ -84,9 +90,10 @@
           </div>
         </div>
 
+        <!-- Exit Action Component -->
         <div class="pt-3 border-t border-gray-100 shrink-0">
-          <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="w-full bg-gray-200 text-gray-800 font-bold py-3.5 px-6 rounded-xl text-xs tracking-wide hover:bg-gray-300 transition-all flex items-center justify-center gap-2">
-            <span>← Exit to Launch Portal Matrix</span>
+          <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="w-full bg-gray-200 text-gray-800 font-bold py-3.5 px-6 rounded-xl text-xs tracking-wide hover:bg-gray-300 transition-all text-center">
+            ← Exit to Launch Portal Matrix
           </button>
         </div>
       </div>
@@ -94,23 +101,99 @@
     </main>
   </div>
 
+  <!-- RUNTIME PSYCHOMETRIC CORE SCRIPT MATRIX -->
   <script>
     const quizData = [
-      { question: "What is the very first thing you check when looking at a green brand?", choices: [{ text: "Clear details on exactly where their ingredients are grown or sourced.", type: "purist" }, { text: "What materials they use for packaging and if it creates trash.", type: "defender" }, { text: "Where the company is based and if they support local businesses.", type: "activist" }] },
-      { question: "A brand claims they are completely 'Eco-Friendly.' What proof do you actually want to see?", choices: [{ text: "Public records tracking their ingredients right back to the original farm.", type: "purist" }, { text: "Official certificates proving none of their boxes end up in a landfill.", type: "defender" }, { text: "Independent proof that they actively invest in local community networks.", type: "activist" }] },
-      { question: "What is your ideal reward for shopping sustainably?", choices: [{ text: "Behind-the-scenes data access to see exactly how their items are made.", type: "purist" }, { text: "Having the plastic waste from my order automatically recycled for me.", type: "defender" }, { text: "Discount vouchers I can use at neighborhood shops and local markets.", type: "activist" }] },
-      { question: "Which news headline about an eco-brand would upset you the most?", choices: [{ text: "Green Brand Caught Secretly Using Ingredients From Unknown Sources.", type: "purist" }, { text: "Eco Brand Exposed for Using Hidden Single-Use Plastics Inside Their Boxes.", type: "defender" }, { text: "Giant Corporation Buys Out Local Business, Forcing Family Suppliers Out.", type: "activist" }] },
-      { question: "When you shop at a regular grocery store, what habit do you prioritize?", choices: [{ text: "Reading labels or scanning QR codes to verify where the item came from.", type: "purist" }, { text: "Bringing my own reusable bags and containers to avoid plastic wrapping.", type: "defender" }, { text: "Choosing items grown or made within a short driving distance from my home.", type: "activist" }] },
-      { question: "What is the best way to stop companies from fake-greening ('greenwashing') their image?", choices: [{ text: "Making companies show open digital records tracking every single supplier.", type: "purist" }, { text: "Forcing companies to design items that are 100% reusable or recyclable.", type: "defender" }, { text: "Keeping shopping focused on local community networks where owners are accountable.", type: "activist" }] },
-      { question: "If you won a community grant to fix an environmental issue, where would you spend it?", choices: [{ text: "Software tools to double-check that imported goods are actually ethical.", type: "purist" }, { text: "Building neighborhood composting setups and zero-waste packaging hubs.", type: "defender" }, { text: "Creating electric cargo bike delivery routes for local small businesses.", type: "activist" }] },
-      { question: "Which app notification would feel most satisfying to receive?", choices: [{ text: "Verified: Your item was tracked directly back to its organic family farm!", type: "purist" }, { text: "Impact Locked: 100% of the wrap from this order was saved from the landfill!", type: "defender" }, { text: "Community Boost: Your purchase just earned points to support neighborhood growers!", type: "activist" }] },
-      { question: "Which core belief best describes how you try to live sustainably?", choices: [{ text: "If a company won't prove exactly where their ingredients come from, I don't trust them.", type: "purist" }, { text: "True sustainability means net-zero waste; everything else is just marketing.", type: "defender" }, { text: "Real economic and environmental power belongs to local neighborhood communities.", type: "activist" }] }
+      {
+        question: "What is the very first thing you check when looking at a green brand?",
+        choices: [
+          { text: "Clear details on exactly where their ingredients are grown or sourced.", type: "purist" },
+          { text: "What materials they use for packaging and if it creates trash.", type: "defender" },
+          { text: "Where the company is based and if they support local businesses.", type: "activist" }
+        ]
+      },
+      {
+        question: "A brand claims they are completely 'Eco-Friendly.' What proof do you actually want to see?",
+        choices: [
+          { text: "Public records tracking their ingredients right back to the original farm.", type: "purist" },
+          { text: "Official certificates proving none of their boxes end up in a landfill.", type: "defender" },
+          { text: "Independent proof that they actively invest in local community networks.", type: "activist" }
+        ]
+      },
+      {
+        question: "What is your ideal reward for shopping sustainably?",
+        choices: [
+          { text: "Behind-the-scenes data access to see exactly how their items are made.", type: "purist" },
+          { text: "Having the plastic waste from my order automatically recycled for me.", type: "defender" },
+          { text: "Discount vouchers I can use at neighborhood shops and local markets.", type: "activist" }
+        ]
+      },
+      {
+        question: "Which news headline about an eco-brand would upset you the most?",
+        choices: [
+          { text: "Green Brand Caught Secretly Using Ingredients From Unknown Sources.", type: "purist" },
+          { text: "Eco Brand Exposed for Using Hidden Single-Use Plastics Inside Their Boxes.", type: "defender" },
+          { text: "Giant Corporation Buys Out Local Business, Forcing Family Suppliers Out.", type: "activist" }
+        ]
+      },
+      {
+        question: "When you shop at a regular grocery store, what habit do you prioritize?",
+        choices: [
+          { text: "Reading labels or scanning QR codes to verify where the item came from.", type: "purist" },
+          { text: "Bringing my own reusable bags and containers to avoid plastic wrapping.", type: "defender" },
+          { text: "Choosing items grown or made within a short driving distance from my home.", type: "activist" }
+        ]
+      },
+      {
+        question: "What is the best way to stop companies from fake-greening ('greenwashing') their image?",
+        choices: [
+          { text: "Making companies show open digital records tracking every single supplier.", type: "purist" },
+          { text: "Forcing companies to design items that are 100% reusable or recyclable.", type: "defender" },
+          { text: "Keeping shopping focused on local community networks where owners are accountable.", type: "activist" }
+        ]
+      },
+      {
+        question: "If you won a community grant to fix an environmental issue, where would you spend it?",
+        choices: [
+          { text: "Software tools to double-check that imported goods are actually ethical.", type: "purist" },
+          { text: "Building neighborhood composting setups and zero-waste packaging hubs.", type: "defender" },
+          { text: "Creating electric cargo bike delivery routes for local small businesses.", type: "activist" }
+        ]
+      },
+      {
+        question: "Which app notification would feel most satisfying to receive?",
+        choices: [
+          { text: "Verified: Your item was tracked directly back to its organic family farm!", type: "purist" },
+          { text: "Impact Locked: 100% of the wrap from this order was saved from the landfill!", type: "defender" },
+          { text: "Community Boost: Your purchase just earned points to support neighborhood growers!", type: "activist" }
+        ]
+      },
+      {
+        question: "Which core belief best describes how you try to live sustainably?",
+        choices: [
+          { text: "If a company won't prove exactly where their ingredients come from, I don't trust them.", type: "purist" },
+          { text: "True sustainability means net-zero waste; everything else is just marketing.", type: "defender" },
+          { text: "Real economic and environmental power belongs to local neighborhood communities.", type: "activist" }
+        ]
+      }
     ];
 
     const archetypeMetadata = {
-      purist: { title: "The Precision Owl", icon: "🦉", description: "Your eco-shopping style relies on absolute clarity. Like an eagle-eyed owl, you look past surface advertising and clever marketing slogans. You demand clear ingredient source logs and background data before trusting a brand." },
-      defender: { title: "The Circular Beaver", icon: "🦫", description: "Your eco-shopping style focuses on resource lifecycles. Like an industrious beaver building a perfect zero-waste structure, you pay deep attention to packaging materials, recycling setups, and completely eliminating landfill trash." },
-      activist: { title: "The Hyper-Local Bee", icon: "🐝", description: "Your eco-shopping style drives regional community support. Like a honeybee working inside a tight neighborhood radius, you prioritize low shipping miles and neighborhood co-ops to support local small businesses." }
+      purist: { 
+        title: "The Precision Owl", 
+        icon: "🦉", 
+        description: "Your eco-shopping style relies on absolute clarity. Like an eagle-eyed owl, you look past surface advertising and clever marketing slogans. You demand clear ingredient source logs and background data before trusting a brand." 
+      },
+      defender: { 
+        title: "The Circular Beaver", 
+        icon: "🦫", 
+        description: "Your eco-shopping style focuses on resource lifecycles. Like an industrious beaver building a perfect zero-waste structure, you pay deep attention to packaging materials, recycling setups, and completely eliminating landfill trash." 
+      },
+      activist: { 
+        title: "The Hyper-Local Bee", 
+        icon: "🐝", 
+        description: "Your eco-shopping style drives regional community support. Like a honeybee working inside a tight neighborhood radius, you prioritize low shipping miles and neighborhood co-ops to support local small businesses." 
+      }
     };
 
     let currentQuestionIndex = 0;
@@ -124,6 +207,7 @@
       
       const container = document.getElementById('choices-container');
       container.innerHTML = '';
+      
       currentQuestion.choices.forEach(choice => {
         const btn = document.createElement('button');
         btn.innerText = choice.text;
@@ -136,13 +220,21 @@
     function handleAnswer(type) {
       scores[type] += 1;
       currentQuestionIndex++;
-      if (currentQuestionIndex < quizData.length) { loadQuestion(); } else { renderProfileCanvas(); }
+      if (currentQuestionIndex < quizData.length) { 
+        loadQuestion(); 
+      } else { 
+        renderProfileCanvas(); 
+      }
     }
 
     function renderProfileCanvas() {
-      let winningType = 'purist', maxScore = -1;
+      let winningType = 'purist';
+      let maxScore = -1;
       for (const [type, score] of Object.entries(scores)) {
-        if (score > maxScore) { maxScore = score; winningType = type; }
+        if (score > maxScore) { 
+          maxScore = score; 
+          winningType = type; 
+        }
       }
       const data = archetypeMetadata[winningType];
       document.getElementById('quiz-view').classList.add('hidden');
@@ -155,11 +247,15 @@
 
     function submitHookEmail() {
       const email = document.getElementById('hook-email').value;
-      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      if (!email || !email.includes('@')) { 
+        alert('Please enter a valid email address.'); 
+        return; 
+      }
       document.getElementById('hook-form').classList.add('hidden');
       document.getElementById('hook-success').classList.remove('hidden');
     }
 
+    // Initialize layout runtime execution loop
     loadQuestion();
   </script>
 </body>
