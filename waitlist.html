@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoPayImpact // Secure Waitlist Portal</title>
+  <title>EcoPayImpact // B2C Product Environment</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,73 +11,134 @@
   <style>
     body { font-family: 'Inter', sans-serif; background-color: #051410; }
     .mono { font-family: 'Roboto Mono', monospace; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(5, 20, 16, 0.5); }
+    ::-webkit-scrollbar-thumb { background: #0B3D2E; border-radius: 10px; }
   </style>
 </head>
-<body class="min-h-screen text-white antialiased p-4 flex flex-col items-center justify-center">
+<body class="min-h-screen text-white antialiased p-4 md:p-8 flex flex-col items-center justify-start gap-6">
 
-  <div class="w-full max-w-md bg-[#F9F9F9] rounded-[32px] border-4 border-[#0B3D2E] shadow-2xl p-6 md:p-8 text-gray-900 text-center transition-all duration-300">
+  <div class="text-center max-w-2xl mt-4">
+    <span class="mono text-xs tracking-[0.4em] text-[#00F5FF] font-bold uppercase">// Viewport 03: UX Prototype Canvas</span>
+    <h2 class="text-3xl font-black text-white tracking-tight mt-2 uppercase">B2C Product Environment</h2>
+    <p class="text-sm text-gray-400 mt-2">Interactive frontend mockups representing the future-state mobile application layout systems designed in Figma.</p>
+  </div>
+
+  <div class="w-full max-w-3xl bg-[#F9F9F9] border-4 border-[#0B3D2E] rounded-[24px] p-6 text-gray-900 shadow-2xl flex flex-col sm:flex-row items-center gap-4 justify-between transition-all duration-300">
+    <div class="text-left">
+      <h4 class="font-black text-[#0B3D2E] text-base uppercase tracking-tight">Join Early User Waitlist</h4>
+      <p class="text-xs text-gray-500 mt-0.5">Secure live profile synchronization on our native mobile platform launch.</p>
+    </div>
     
-    <div id="input-container" class="space-y-6">
-      <div>
-        <span class="mono text-[10px] tracking-[0.3em] text-[#0B3D2E]/60 font-bold uppercase">B2C Network Ingestion</span>
-        <h2 class="text-2xl font-black text-[#0B3D2E] tracking-tight mt-1 uppercase">Secure Waitlist Registration</h2>
-        <p class="text-xs text-gray-500 mt-2 leading-relaxed">Input your network credentials to map your assigned eco-animal archetype profile directly to upcoming regional transaction tier rewards.</p>
-      </div>
-
-      <div class="text-left space-y-3">
-        <label class="mono text-[11px] font-bold text-[#0B3D2E] tracking-wider uppercase">// Network Identity Vector:</label>
-        <input type="email" id="user-email" placeholder="Enter email address..." class="w-full bg-white text-gray-800 border-2 border-gray-200 rounded-xl p-4 text-sm font-semibold shadow-sm focus:outline-none focus:border-[#0B3D2E] transition-all duration-200">
-        <p id="error-msg" class="mono text-[10px] text-red-600 font-bold hidden">! Target requires valid input syntax</p>
-      </div>
-
-      <button onclick="executeWaitlistSubmission()" class="w-full bg-[#0B3D2E] text-white font-bold py-4 px-6 rounded-xl text-sm tracking-wide shadow-lg hover:bg-[#051410] transition-all duration-200 flex items-center justify-center gap-2">
-        <span>Secure My Network Position</span>
-        <span class="text-[#00F5FF]">→</span>
+    <div id="app-waitlist-form" class="flex w-full sm:w-auto gap-2">
+      <input type="email" id="app-waitlist-email" placeholder="Enter email address..." class="bg-white text-gray-800 border-2 border-gray-200 rounded-xl px-4 py-2 text-xs font-semibold focus:outline-none focus:border-[#0B3D2E] transition-all">
+      <button onclick="submitAppWaitlist()" class="bg-[#0B3D2E] text-white font-bold text-xs px-5 py-2.5 rounded-xl hover:bg-[#051410] transition-all whitespace-nowrap">
+        Secure My Spot →
       </button>
     </div>
+    <p id="app-waitlist-success" class="mono text-sm font-bold text-emerald-600 hidden py-2">✓ Identity Registered to Network Access Queue!</p>
+  </div>
 
-    <div id="success-container" class="hidden space-y-6 py-4 animate-fade-in">
-      <div class="inline-block bg-emerald-100 border border-emerald-300 rounded-full p-4 text-4xl shadow-inner">
-        🛡️
-      </div>
-      <div>
-        <h3 class="text-2xl font-black text-[#0B3D2E] uppercase tracking-tight">Identity Token Minted</h3>
-        <p class="mono text-[10px] text-[#00F5FF] font-bold bg-[#051410] inline-block px-3 py-1 rounded-md mt-2 tracking-widest">REGISTRY LOG: SECURE</p>
-      </div>
-      <p class="text-xs text-gray-600 leading-relaxed px-2">
-        Success! Your profile dataset has been anonymized and appended to the local LA consumer tier ledger matrix. A verification confirmation signature tracking file has been simulated to your entry queue.
-      </p>
-      
-      <div class="pt-4 border-t border-gray-100">
-        <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="w-full bg-[#0B3D2E] text-white font-mono text-xs font-bold py-3.5 px-4 rounded-xl shadow-md hover:bg-[#051410] transition flex items-center justify-center gap-2">
-          ← Return to Portal Framework
-        </button>
-      </div>
+  <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 px-4 mt-2 justify-items-center">
+
+    <div class="w-full max-w-[300px] h-[600px] bg-[#F9F9F9] rounded-[36px] border-[6px] border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col relative text-gray-900">
+      <header class="bg-[#0B3D2E] text-white px-4 pt-8 pb-3 flex items-center justify-between shrink-0">
+        <span class="mono text-[8px] tracking-wider text-[#00F5FF]">ECOPAY // CORE</span>
+        <span class="text-[10px] mono text-emerald-400 font-bold">● ONLINE</span>
+      </header>
+      <main class="flex-1 p-4 space-y-4 overflow-y-auto bg-[#F9F9F9]">
+        <div class="bg-white border border-gray-200 rounded-xl p-3 shadow-sm text-center">
+          <div class="text-3xl">🦉</div>
+          <h4 class="text-sm font-black text-[#0B3D2E] mt-1 uppercase">Precision Owl Active</h4>
+          <span class="mono text-[8px] bg-[#051410] text-[#00F5FF] px-2 py-0.5 rounded inline-block mt-1">ID: #SNOOPLOGG</span>
+        </div>
+        <div class="bg-[#0B3D2E] text-white rounded-xl p-3 text-center shadow-inner">
+          <p class="mono text-[8px] text-gray-300 uppercase tracking-widest">Accrued Impact Yield</p>
+          <p class="text-2xl font-black text-[#00F5FF] tracking-tight mt-0.5">2,450 <span class="text-xs font-normal text-white">PTS</span></p>
+        </div>
+        <div class="space-y-2">
+          <p class="mono text-[8px] text-gray-400 uppercase font-bold tracking-wider">// Recent Verified Logs:</p>
+          <div class="bg-white border border-gray-100 rounded-lg p-2.5 flex justify-between items-center text-[10px]">
+            <div>
+              <p class="font-bold text-[#0B3D2E]">Local Produce Hub</p>
+              <p class="text-[8px] text-gray-400">Tier-2 Trace Maps OK</p>
+            </div>
+            <span class="mono text-emerald-600 font-bold">+50 PTS</span>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-lg p-2.5 flex justify-between items-center text-[10px]">
+            <div>
+              <p class="font-bold text-[#0B3D2E]">E-Bike Parts Supply</p>
+              <p class="text-[8px] text-gray-400">Zero Film Packaging</p>
+            </div>
+            <span class="mono text-emerald-600 font-bold">+120 PTS</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="w-full max-w-[300px] h-[600px] bg-[#F9F9F9] rounded-[36px] border-[6px] border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col relative text-gray-900">
+      <header class="bg-[#0B3D2E] text-white px-4 pt-8 pb-3 flex items-center justify-between shrink-0">
+        <span class="mono text-[8px] tracking-wider text-[#00F5FF]">ECOPAY // SCANNER</span>
+        <span class="text-[10px] mono text-[#00F5FF] font-bold">● ACQUIRING</span>
+      </header>
+      <main class="flex-1 p-4 flex flex-col justify-between bg-gray-900 text-white relative">
+        <div class="my-auto border-2 border-dashed border-[#00F5FF]/60 rounded-2xl aspect-square w-full max-w-[180px] mx-auto flex items-center justify-center relative bg-black/40 shadow-inner">
+          <div class="absolute inset-0 bg-[#00F5FF]/5 animate-pulse rounded-2xl"></div>
+          <span class="mono text-[9px] text-[#00F5FF] tracking-widest font-bold uppercase animate-pulse">[ ALIGN QR CODE ]</span>
+        </div>
+        <div class="bg-[#051410] border border-white/10 rounded-xl p-3 space-y-2">
+          <div class="flex items-center justify-between border-b border-white/5 pb-1">
+            <span class="mono text-[8px] text-[#00F5FF] uppercase font-bold">Trace Target Input</span>
+            <span class="mono text-[7px] text-gray-400">READY</span>
+          </div>
+          <p class="text-xs font-bold text-gray-100">CPG-Product Matrix Item #8942</p>
+          <div class="space-y-1 text-[9px] text-gray-400">
+            <p class="flex justify-between"><span>● Tier-1 Manufacturing Node:</span> <span class="text-white">Culver City, CA</span></p>
+            <p class="flex justify-between"><span>● Tier-2 Source Origin:</span> <span class="text-emerald-400 font-bold">Verified Farm Registry</span></p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="w-full max-w-[300px] h-[600px] bg-[#F9F9F9] rounded-[36px] border-[6px] border-[#0B3D2E] shadow-2xl overflow-hidden flex flex-col relative text-gray-900">
+      <header class="bg-[#0B3D2E] text-white px-4 pt-8 pb-3 flex items-center justify-between shrink-0">
+        <span class="mono text-[8px] tracking-wider text-[#00F5FF]">ECOPAY // REWARDS</span>
+        <span class="text-[10px] mono text-purple-400 font-bold">● REFRESHED</span>
+      </header>
+      <main class="flex-1 p-4 space-y-4 overflow-y-auto bg-[#F9F9F9]">
+        <div class="border-b border-gray-200 pb-2">
+          <h4 class="text-xs font-black text-[#0B3D2E] uppercase tracking-wide">// Available Archetype Stream Promos:</h4>
+          <p class="text-[10px] text-gray-400">Custom tailored challenge loops based on network verification signatures.</p>
+        </div>
+        <div class="bg-white border-2 border-dashed border-[#0B3D2E]/30 rounded-xl p-3 relative overflow-hidden space-y-2 shadow-sm">
+          <div class="flex justify-between items-start">
+            <span class="text-[9px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Active Challenge</span>
+            <span class="text-xs">🦉</span>
+          </div>
+          <p class="text-xs font-black text-[#0B3D2E]">The Owl Audit Voucher</p>
+          <p class="text-[9px] text-gray-500 leading-normal">Scan 3 brands carrying verified Tier-2 farm telemetry metrics this cycle.</p>
+          <div class="bg-[#051410] text-[#00F5FF] text-center rounded py-1.5 mono text-[9px] font-bold tracking-wide cursor-pointer hover:bg-black transition-all">
+            ACTIVATE CLAIM (+200 PTS)
+          </div>
+        </div>
+      </main>
     </div>
 
   </div>
 
+  <footer class="mt-4 pb-8 w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-5 gap-4 px-4 shrink-0">
+    <p class="mono text-[10px] text-gray-500">// End-to-End High-Fidelity UI Presentation Canvas.</p>
+    <button onclick="window.open('https://ecopayimpact.carrd.co/#quiz-results', '_self')" class="mono text-xs bg-[#0B3D2E] border border-[#00F5FF]/30 text-[#00F5FF] font-bold px-5 py-2.5 rounded-xl hover:bg-transparent transition-all shadow-md">
+      ← Exit Showcase Terminal
+    </button>
+  </footer>
+
   <script>
-    function executeWaitlistSubmission() {
-      const emailField = document.getElementById('user-email');
-      const errorLabel = document.getElementById('error-msg');
-      const inputLayout = document.getElementById('input-container');
-      const successLayout = document.getElementById('success-container');
-
-      // Basic regex syntax evaluation check
-      if (!emailField.value || !emailField.value.includes('@')) {
-        errorLabel.classList.remove('hidden');
-        emailField.classList.add('border-red-400');
-        return;
-      }
-
-      // Hide error configurations if validated
-      errorLabel.classList.add('hidden');
-      emailField.classList.remove('border-red-400');
-
-      // Trigger dynamic UI state transitions
-      inputLayout.classList.add('hidden');
-      successLayout.classList.remove('hidden');
+    function submitAppWaitlist() {
+      const email = document.getElementById('app-waitlist-email').value;
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      document.getElementById('app-waitlist-form').classList.add('hidden');
+      document.getElementById('app-waitlist-success').classList.remove('hidden');
     }
   </script>
 </body>
